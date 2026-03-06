@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Escena</title>
+
+    <!-- Load the ArcGIS Maps SDK for JavaScript from CDN -->
+    <script
+      type="module"
+      src="https://js.arcgis.com/5.0/"
+    ></script>
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+    </style>
+
+    <script
+      type="module"
+      src="main.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <arcgis-scene
+      basemap="topo-vector"
+      camera-position="-3.7, 40.42, 1260"
+    >
+      <calcite-button
+        id="boton1"
+        slot="bottom-start"
+        >Camara 1</calcite-button
+      >
+      <calcite-button
+        id="boton2"
+        slot="bottom-start"
+        >Camara 2</calcite-button
+      >
+      <calcite-button
+        id="boton3"
+        slot="bottom-start"
+        >Camara 3</calcite-button
+      >
+    </arcgis-scene>
+  </body>
+</html>
