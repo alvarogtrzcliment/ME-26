@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capa gráfica 3D</title>
+
+    <!-- ArcGIS Maps SDK for JavaScript -->
+    <script type="module" src="https://js.arcgis.com/5.0/"></script>
+
+    <script type="module" src="main.js" defer></script>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <arcgis-scene basemap="gray-3d" camera-position="-3.69, 40.40, 120" camera-tilt="60" camera-heading="352.88">
+        <arcgis-compass slot="top-left" visual-scale="m"></arcgis-compass>
+        <arcgis-daylight slot="bottom-right"></arcgis-daylight>
+        <arcgis-shadow-cast slot="bottom-left"
+            date="Fri Mar 13 2026 00:00:00 GMT+0100 (hora estándar de Europa central)" start-time-of-day="36000000"
+            end-time-of-day="57600000" mode="min-duration" utc-offset="0" discrete-interval="0" discrete-color="#000000"
+            min-duration="14400000" min-min-duration="0" max-min-duration="28800000" min-duration-color="#ff0000"
+            total-duration-mode="continuous" total-duration-color="#000000" heading-level="4"></arcgis-shadow-cast>
+    </arcgis-scene>
+</body>
+
+</html>
