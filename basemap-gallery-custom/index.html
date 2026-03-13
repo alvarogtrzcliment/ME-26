@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basemap Gallery Custom</title>
+    
+    <!-- ArcGIS Maps SDK for JavaScript -->
+    <script type="module" src="https://js.arcgis.com/5.0/"></script>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+
+    <script type="module" src="main.js" defer>
+    </script>
+</head>
+
+<body>
+    <arcgis-map basemap="streets" center="-3,40" zoom="8">
+          <arcgis-basemap-gallery slot="bottom-right"></arcgis-basemap-gallery>
+        </arcgis-basemap-toggle>
+    </arcgis-map>
+</body>
+
+</html>
