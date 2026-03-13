@@ -47,6 +47,8 @@ graphicsLayer.add(new Graphic({
 
 
 const query = new Query({
+
+    where: "Dependencia_Funcional = 'Privados'", 
     geometry: geometriaPoligono,
     spatialRelationship: "intersects",
     returnGeometry: true,
@@ -65,7 +67,7 @@ arcgisMap.addEventListener("arcgisViewReadyChange", () => {
 
     hospitalesFL.queryFeatures(query)
         .then((results) => {
-            // console.log(results)
+            console.log(results.features)
             results.features.forEach((hospi) => {
                 const hospital = new Graphic({
                     geometry: hospi.geometry,

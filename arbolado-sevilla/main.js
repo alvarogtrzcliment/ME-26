@@ -100,54 +100,54 @@ arcgisMap.addEventListener('click', async (evt) => {
 
     // // Seleccionar árboles dentro del buffer
     // CLIENTE - EFECTO
-    // arcgisMap.view.whenLayerView(treesLayer).then((treeTypeLayerView) => {
-    //     const query = treeTypeLayerView.createQuery();
-    //     query.geometry = buffer;
-
-    //     treeTypeLayerView.createQuery().then
-    //   treeTypeLayerView.featureEffect = {
-    //     filter: {
-    //       geometry: buffer,
-    //     },
-    //     excludedEffect: "opacity(0.3) blur(5px)",
-    //   };
-    // });
-
-    // CLIENTE - QUERY
     arcgisMap.view.whenLayerView(treesLayer).then((treeTypeLayerView) => {
         const query = treeTypeLayerView.createQuery();
         query.geometry = buffer;
 
+        treeTypeLayerView.createQuery().then
+      treeTypeLayerView.featureEffect = {
+        filter: {
+          geometry: buffer,
+        },
+        excludedEffect: "opacity(0.3) blur(5px)",
+      };
+    });
 
-        treeTypeLayerView.queryFeatures(query).then((featuresSet) => {
-
-            const simbologiaPunto = new SimpleMarkerSymbol({
-                angle: 0,
-                color: [255, 255, 255, 0.25],
-                outline: {
-                    cap: 'round',
-                    color: [0, 122, 194, 1],
-                    join: 'round',
-                    miterLimit: 1,
-                    style: 'solid',
-                    width: 1
-                },
-                size: 12,
-                style: 'circle',
-                xoffset: 0,
-                yoffset: 0
-            });
-
-            const featuresSymbol = featuresSet.features.map((feature) => {
-                feature.symbol = simbologiaPunto;
-                return feature;
-            });
+    // CLIENTE - QUERY
+    // arcgisMap.view.whenLayerView(treesLayer).then((treeTypeLayerView) => {
+    //     const query = treeTypeLayerView.createQuery();
+    //     query.geometry = buffer;
 
 
-            // añadir todos los gráficos
-            capaGraficaGL.addMany(featuresSymbol);
-        });
-    })
+    //     treeTypeLayerView.queryFeatures(query).then((featuresSet) => {
+
+    //         const simbologiaPunto = new SimpleMarkerSymbol({
+    //             angle: 0,
+    //             color: [255, 255, 255, 0.25],
+    //             outline: {
+    //                 cap: 'round',
+    //                 color: [0, 122, 194, 1],
+    //                 join: 'round',
+    //                 miterLimit: 1,
+    //                 style: 'solid',
+    //                 width: 1
+    //             },
+    //             size: 12,
+    //             style: 'circle',
+    //             xoffset: 0,
+    //             yoffset: 0
+    //         });
+
+    //         const featuresSymbol = featuresSet.features.map((feature) => {
+    //             feature.symbol = simbologiaPunto;
+    //             return feature;
+    //         });
+
+
+    //         // añadir todos los gráficos
+    //         capaGraficaGL.addMany(featuresSymbol);
+    //     });
+    // })
 
 
 
