@@ -1,0 +1,20 @@
+{
+  "name": "edicion-typescript",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.3",
+    "vite": "^8.0.1"
+  },
+  "dependencies": {
+    "@arcgis/core": "^5.0.12",
+    "@arcgis/map-components": "^5.0.12",
+    "@esri/calcite-components": "^5.0.2"
+  }
+}
